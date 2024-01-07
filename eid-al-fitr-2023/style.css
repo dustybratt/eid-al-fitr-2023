@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden; 
+}
+body {
+  background: linear-gradient(#8b016a, #6f1159);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+#header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+#header .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .navigation li {
+  list-style: none;
+  margin-left: 20px;
+}
+#header .navigation li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+#header .navigation li a:hover,
+#header .navigation li a.active {
+  background-color: #fff;
+  color: #000;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+}
+section img#lamp {
+  mix-blend-mode: screen;
+}
+section img#masjid {
+  transform: translateY(-20px);
+}
+section img#stars2 {
+  display: none;
+}
+#text {
+  color: #fff;
+  font-size: 6vw;
+  white-space: nowrap;
+  text-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  font-family: "Rancho", cursive;
+  z-index: 9;
+}
+.sec{
+  position: relative;
+  padding: 100px;
+  background: #96283a;
+  text-align: center;
+}
+.sec h2{
+  font-size: 3em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.sec p{
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+@media (max-width: 992px) {
+  #header {
+    padding: 20px;
+  }
+  #header .logo {
+    font-size: 1.5em;
+  }
+  #header .navigation {
+    display: none;
+  }
+  #header .navigation.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #6f1159;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+  }
+  #header .navigation li {
+    margin-left: 0;
+  }
+  #header .navigation li a {
+    font-size: 1.5em;
+    margin: 5px 0;
+    display: inline-block;
+    border-radius: 30px;
+  }
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url("imgs/menu.png");
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10000;
+  }
+  .toggle.active {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: url("imgs/close.png");
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .sec {
+    padding: 20px;
+  }
+  .sec h2 {
+    font-size: 1.5em;
+  }
+  section img#stars2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  section img#mosque {
+    transform: translate(-5px);
+  }
+  #text {
+    font-size: 15vw;
+  }
+}
